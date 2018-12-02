@@ -1,0 +1,1 @@
+$(document).ready(function(){$("tr.problemrow").on("mouseover",function(){$(this).find("div.todo-widget").css({visibility:"visible"})});$("tr.problemrow").on("mouseout",function(){$(this).find("div.todo-widget").css({visibility:"hidden"})});$(document).tooltip({items:"div[data-tooltip]",content:function(){var t=$(this);var i=t.data("tooltip");return i}})});

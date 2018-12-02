@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://www.codechef.com/COOK62/problems/STACKS -->
+<html lang="en" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <script id="twitter-wjs" src="./Stacks   CodeChef_files/widgets.js"></script><script src="./Stacks   CodeChef_files/4e7c8fce06a9ab05530008e5.js" async=""></script><script async="" src="./Stacks   CodeChef_files/fp.js"></script><script type="text/javascript" async="" src="./Stacks   CodeChef_files/atrk.js"></script><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script id="facebook-jssdk" src="https://connect.facebook.net/en_US/sdk.js"></script><script>
+        (function (_, e, rr, s) {
+            _errs = [s];
+            var c = _.onerror;
+            _.onerror = function () {
+                var a = arguments;
+                _errs.push(a);
+                c && c.apply(this, a)
+            };
+            var b = function () {
+                var c = e.createElement(rr), b = e.getElementsByTagName(rr)[0];
+                c.src = "//beacon.errorception.com/" + s + ".js";
+                c.async = !0;
+                b.parentNode.insertBefore(c, b)
+            };
+            _.addEventListener ? _.addEventListener("load", b, !1) : _.attachEvent("onload", b)
+        })
+        (window, document, "script", "4e7c8fce06a9ab05530008e5");
+    </script>
+
+    <link rel="dns-prefetch" href="https://codechef_shared.s3.amazonaws.com/">
+    <link rel="dns-prefetch" href="https://beacon.errorception.com/">
+    <link rel="dns-prefetch" href="https://static.ak.facebook.com/">
+    <link rel="dns-prefetch" href="https://fbcdn-profile-a.akamaihd.net/">
+    <script type="text/javascript">var _sf_startpt = (new Date()).getTime()</script>
+    <title>Stacks | CodeChef</title>
+    
+    <meta name="keywords" content="programming, language, algorithm, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+    <link rel="shortcut icon" href="https://www.codechef.com/misc/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" media="all" href="./Stacks   CodeChef_files/main.css">
+    <link rel="stylesheet" href="https://www.codechef.com/em/components/autocomplete/css/autocomplete.css?q2=95542899">
+    <link rel="stylesheet" href="https://www.codechef.com/em/components/datatable/css/datatable.css?q2=95542899">
+    <link rel="stylesheet" href="https://www.codechef.com/misc/font-awesome/css/font-awesome.css?q2=95542899">
+    <link rel="stylesheet" href="https://www.codechef.com/em/components/comment/css/comment.css?q2=95542899">
+    <link rel="stylesheet" href="https://www.codechef.com/sites/all/modules/codechef_open_register/css/register.css?q2=95542899">
+    <link rel="stylesheet" href="https://www.codechef.com/sites/all/modules/codechef_open_register/css/complete_registration.css?q2=95542899">
+    <script src="./Stacks   CodeChef_files/platform.js" async="" defer="" gapi_processed="true"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/aes.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/jquery.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/localStorage.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/todo_notification.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/moment.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/marked.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/common.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/handlebars.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/prod.ember.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/autocomplete.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/datatable.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/comment.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/drupal.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/popupoverlay.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/keybinding.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/codechefGenericModal.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/fb_sdk.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/codechef_common_functions.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/nice_menus.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/jquery.scrollTo-min.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/jquery.localscroll-min.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/tableofcontents.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/common(1).js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/contest_page.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/jquery-ui-1.10.0.custom.min.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/problemstatus.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/contest.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/jquery.cookie.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/form.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/notifications.js"></script>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/todo-widget.js"></script>
+    <link type="text/css" rel="stylesheet" media="all" href="./Stacks   CodeChef_files/jquery.growl.css">
+    <link type="text/css" rel="stylesheet" href="./Stacks   CodeChef_files/style.css">
+    <link type="text/css" rel="stylesheet" href="./Stacks   CodeChef_files/github-markdown.css">
+    <style>
+
+        :root {
+            font-size: 62.5%;
+        }
+
+        .ccl-su-img-social-disconnect {
+            -webkit-filter: grayscale(95%);
+            -moz-filter: grayscale(95%);
+            -o-filter: grayscale(95%);
+            -ms-filter: grayscale(95%);
+            filter: grayscale(95%);
+        }
+
+        .ccl-su-img-social-connect {
+            -webkit-filter: grayscale(35%);
+            -moz-filter: grayscale(35%);
+            -o-filter: grayscale(35%);
+            -ms-filter: grayscale(35%);
+            filter: grayscale(35%);
+        }
+
+        .ccl-su-img-social:hover {
+            -webkit-filter: grayscale(0%);
+            -moz-filter: grayscale(0%);
+            -o-filter: grayscale(0%);
+            -ms-filter: grayscale(0%);
+            filter: grayscale(0%);
+        }
+
+        .ccl-su-img-social-small {
+            width: 3rem;
+        }
+
+        .ccl-su-img-social-mini {
+            width: 1rem;
+        }
+
+        .ccl-su-img-social-medium {
+            width: 5rem;
+        }
+
+        .ccl-su-img-social-large {
+            width: 7rem;
+        }
+
+        .oauth-buttons-header {
+            position: relative;
+            top: -0.5rem;
+        }
+
+        .oauth-button {
+            pading:0;
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        .oauth-button-small {
+            width: 3rem;
+            height: 3rem;
+            margin-right: 0.6rem;
+            margin-left: 0.6rem;
+        }
+
+        .oauth-button-medium {
+            width: 5rem;
+            height: 5rem;
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+
+        .oauth-button-large {
+            width: 7rem;
+            height: 7rem;
+            margin-right: 1.4rem;
+            margin-left: 1.4rem;
+        }
+
+        .oauth-button-mini {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.2rem;
+            margin-left: 0.2rem;
+        }
+
+        /*this is to avoid padding and border of button in firefox*/
+        .oauth-button::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+
+    </style>
+    <script type="text/javascript" src="./Stacks   CodeChef_files/jquery.growl.js"></script>
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow-x:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://m-static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body class="sidebar-right">
+<center>
+    <div id="ember-root" class="ember-application">
+        
+        
+        
+        
+        
+    
+    <div id="ember242" class="ember-view">
+            <div id="header" class="wrapper">
+                <div class="inner-wrapper">
+                    <!-- Header -->
+                    <div id="logo-floater" class="cols-2">
+                        <a href="https://www.codechef.com/" title=""><img src="https://www.codechef.com/sites/all/themes/abessive/logo.png" alt="CodeChef is a non-commercial competitive programming community" id="logo"><span></span></a>
+                    </div>
+                    <div class="cols-2">
+                        <div id="custom-login">
+                            <!--Hello <strong>Admin</strong>, Check your <strong><a href="">Account</a></strong> or <a href="/logout">Log Out</a>-->
+                            
+                            
+                            <div id="user-bar"><div class="login-button">
+                                <a class="login-link" href="javascript:void(0);">
+                                    <span>Login</span>
+                                </a>
+    		<span class="login-box"><form action="https://www.codechef.com/node?destination=/COOK62/problems/STACKS" data-bindattr-328="328" accept-charset="UTF-8" method="post" id="user-login-form">
+                <div><div class="login-label"><span>Username (New User? <a href="https://www.codechef.com/user/register/"><span>Signup</span></a>)</span> <span>Password (<a href="https://www.codechef.com/user/password"><span>Forgot Password?</span></a>)</span></div><div class="form-item" id="edit-name-wrapper">
+                    <input type="text" maxlength="60" name="name" id="edit-name" size="15" value="" class="form-text required input">
+                </div>
+                    <div class="form-item" id="edit-pass-wrapper">
+                        <input type="password" name="pass" id="edit-pass" maxlength="60" size="15" class="form-text required input">
+                    </div>
+                    <input type="image" name="submit" id="edit-submit" class="form-submit" src="https://www.codechef.com/sites/all/themes/abessive/images/fbconnect/go-button.gif">
+                    <input type="hidden" name="form_build_id" id="form-2c6058e75cba7db99eabe208eea57b1b" value="form-2c6058e75cba7db99eabe208eea57b1b">
+                    <input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block">
+
+                </div></form>
+</span>
+                            </div>
+                                <a href="https://www.codechef.com/user/register/" class="singup-button"><span>Signup</span></a></div>
+                            
+                            <div id="facebook-login">
+                                <table cellpadding="0" cellspacing="0">
+                                    <tbody><tr>
+                                        <td>
+                                            <div id="oauth-buttons" class="oauth-buttons-header">
+                                                <button class="oauth-button oauth-button-small" style="text-decoration: none;" title="Google Login" id="button_google" onclick="clearUserCache(); window.location=&#39;/OAuth/google?state=initiate&#39;;"><img class="ccl-su-img-social-connect ccl-su-img-social ccl-su-img-social-small" src="https://www.codechef.com/sites/all/modules/codechef_open_register/images/google.png">  </button><button class="oauth-button oauth-button-small" style="text-decoration: none;" title="Github Login" id="button_github" onclick="clearUserCache(); window.location=&#39;/OAuth/github?state=initiate&#39;;"><img class="ccl-su-img-social-connect ccl-su-img-social ccl-su-img-social-small" src="https://www.codechef.com/sites/all/modules/codechef_open_register/images/github.png">  </button><button class="oauth-button oauth-button-small" style="text-decoration: none;" title="Facebook Login" id="button_facebook" onclick="clearUserCache(); window.location=&#39;/fb/auth?src=/&#39;;"><img class="ccl-su-img-social-connect ccl-su-img-social ccl-su-img-social-small" src="https://www.codechef.com/sites/all/modules/codechef_open_register/images/facebook.png">  </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                            <div class="question-note">
+                                <a href="https://www.codechef.com/COOK62/problems/STACKS#">
+                                    <span class="icon-question">Note</span>
+
+                                    <div class="fb-help-tooltip">
+                                        <ul>
+                                            <li>Publicize your achievements on your Facebook Wall.</li>
+                                            <li>Challenge your friends or ask them for help.</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div title="My Todo list" class="notification-box-todo">
+                                <img id="todo-notification-icon" src="https://www.codechef.com/sites/all/themes/abessive/images/notification-icon.png" border="0">
+
+                                <div class="notification-counter"></div>
+                                <div class="notification-listbox"></div>
+                            </div>
+                            
+                        </div>
+
+
+                        <div id="block-nice_menus-1" class="block block-nice_menus block-header">
+                            <div class="content">
+                                <h2><span class="nice-menu-hide-title">Site Navigation</span></h2>
+                                
+                                <ul class="nice-menu nice-menu-down" id="nice-menu-0"><li id="menu-302" class="menuparent menu-path-problems-school"><a href="https://www.codechef.com/problems/school" title="">PRACTICE</a><ul><li id="menu-5215" class="menu-path-ide"><a href="https://www.codechef.com/ide" title="">Code, Compile &amp; Run</a></li>
+<li id="menu-2602" class="menu-path-problems-school"><a href="https://www.codechef.com/problems/school" title="">Beginner</a></li>
+<li id="menu-303" class="menu-path-problems-easy"><a href="https://www.codechef.com/problems/easy" title="">Easy</a></li>
+<li id="menu-304" class="menu-path-problems-medium"><a href="https://www.codechef.com/problems/medium" title="">Medium</a></li>
+<li id="menu-305" class="menu-path-problems-hard"><a href="https://www.codechef.com/problems/hard" title="">Hard</a></li>
+<li id="menu-1819" class="menu-path-problems-challenge"><a href="https://www.codechef.com/problems/challenge" title="">Challenge</a></li>
+<li id="menu-1376" class="menu-path-problems-extcontest"><a href="https://www.codechef.com/problems/extcontest" title="">Peer</a></li>
+</ul>
+</li>
+<li id="menu-309" class="menuparent menu-path-contests"><a href="https://www.codechef.com/contests" title="">COMPETE</a><ul><li id="menu-2203" class="menu-path-www.codechef.com-contests"><a href="http://www.codechef.com/contests" title="">All Contests</a></li>
+<li id="menu-5224" class="menu-path-www.codechef.com-COOK62"><a href="http://www.codechef.com/COOK62" title="">September Mega Cook-Off 2015</a></li>
+<li id="menu-5217" class="menu-path-www.codechef.com-LTIME28"><a href="http://www.codechef.com/LTIME28" title="">September Lunchtime 2015</a></li>
+<li id="menu-5225" class="menu-path-www.codechef.com-OCT15"><a href="http://www.codechef.com/OCT15" title="">October Challenge 2015</a></li>
+</ul>
+</li>
+<li id="menu-138" class="menuparent menu-path-discuss.codechef.com-"><a href="http://discuss.codechef.com/" title="">DISCUSS</a><ul><li id="menu-139" class="menu-path-discuss.codechef.com-"><a href="http://discuss.codechef.com/" title="">Forums</a></li>
+<li id="menu-140" class="menu-path-blog.codechef.com-"><a href="http://blog.codechef.com/" title="">Blog</a></li>
+<li id="menu-920" class="menu-path-wiki-"><a href="https://www.codechef.com/wiki/" title="">Wiki</a></li>
+<li id="menu-2202" class="menu-path-https--www.facebook.com-CodeChef"><a href="https://www.facebook.com/CodeChef" title="">Facebook</a></li>
+<li id="menu-141" class="menu-path-www.twitter.com-codechef"><a href="http://www.twitter.com/codechef" title="">Twitter</a></li>
+</ul>
+</li>
+<li id="menu-143" class="menuparent menu-path-node-124098"><a href="https://www.codechef.com/community" title="">COMMUNITY</a><ul><li id="menu-733" class="menu-path-www.codechef.com-hostyourcontest"><a href="http://www.codechef.com/hostyourcontest" title="Hosting Contest on CodeChef">Host your Contest</a></li>
+<li id="menu-2310" class="menu-path-www.codechef.com-goforgold"><a href="http://www.codechef.com/goforgold" title="">Go for Gold</a></li>
+<li id="menu-3830" class="menu-path-www.codechef.com-campus_chapter-about"><a href="http://www.codechef.com/campus_chapter/about" title="">Campus Chapter</a></li>
+</ul>
+</li>
+<li id="menu-147" class="menuparent menu-path-node-3"><a href="https://www.codechef.com/help" title="">HELP</a><ul><li id="menu-643" class="menu-path-www.codechef.com-wiki-faq"><a href="http://www.codechef.com/wiki/faq" title="">Frequently Asked Questions</a></li>
+<li id="menu-710" class="menu-path-www.codechef.com-wiki-faq-problem-setters"><a href="http://www.codechef.com/wiki/faq-problem-setters" title="">FAQ for problem setters</a></li>
+<li id="menu-1389" class="menu-path-www.codechef.com-problemsetting"><a href="http://www.codechef.com/problemsetting" title="Codechef Problem Creation">Problem Setting</a></li>
+<li id="menu-850" class="menu-path-www.codechef.com-wiki-tutorials"><a href="http://www.codechef.com/wiki/tutorials" title="">Tutorials</a></li>
+<li id="menu-2200" class="menu-path-www.codechef.com-long-ranklist-AX"><a href="http://www.codechef.com/long/ranklist/AX" title="Long contest rankings list">Long Contest Ranks</a></li>
+<li id="menu-2199" class="menu-path-www.codechef.com-short-ranklist-AX"><a href="http://www.codechef.com/short/ranklist/AX" title="Short contest rankings list">Short Contest Ranks</a></li>
+<li id="menu-4881" class="menu-path-www.codechef.com-ltime-all-ranklist-AX"><a href="http://www.codechef.com/ltime/all/ranklist/AX" title="">Lunchtime Ranks (all)</a></li>
+<li id="menu-4882" class="menu-path-www.codechef.com-ltime-school-ranklist-AX"><a href="http://www.codechef.com/ltime/school/ranklist/AX" title="">Lunchtime Ranks (school)</a></li>
+<li id="menu-1820" class="menu-path-node-503865"><a href="https://www.codechef.com/event-calendar" title="Event Calendar">Event Calendar</a></li>
+<li id="menu-2372" class="menu-path-discuss.codechef.com-top-users-"><a href="http://discuss.codechef.com/top/users/" title="">Top Contributors on Discuss</a></li>
+</ul>
+</li>
+<li id="menu-150" class="menuparent menu-path-node-1"><a href="https://www.codechef.com/aboutus_old" title="">ABOUT</a><ul><li id="menu-151" class="menu-path-www.codechef.com-aboutus"><a href="http://www.codechef.com/aboutus" title="">About CodeChef</a></li>
+<li id="menu-849" class="menu-path-www.codechef.com-team"><a href="http://www.codechef.com/team" title="Team CodeChef">Team CodeChef</a></li>
+<li id="menu-708" class="menu-path-node-157468"><a href="https://www.codechef.com/press" title="Press Room">Press Room</a></li>
+<li id="menu-1312" class="menu-path-www.codechef.com-financials-"><a href="http://www.codechef.com/financials/" title="">CodeChef Financials</a></li>
+<li id="menu-709" class="menu-path-node-157470"><a href="https://www.codechef.com/ceoscorner" title="CEO&#39;s Corner">CEO's Corner</a></li>
+<li id="menu-1858" class="menu-path-www.codechef.com-contactus"><a href="http://www.codechef.com/contactus" title="">Contact Us</a></li>
+<li id="menu-152" class="menu-path-www.directi.com-"><a href="http://www.directi.com/" title="">About Directi</a></li>
+</ul>
+</li>
+</ul>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="ember249" class="ember-view">
+        <!-- /HEADER -->
+        <!-- BEGIN: CONTENT -->
+        <table cellspacing="0" cellpadding="10" id="maintable" class="maintable">
+            <tbody><tr>
+                <td class="content" width="99%">
+                    <div class="wrapper" id="content-regions">
+                        
+                        <div class="outer-box-problems">
+                            <div id="breadcrumbs">
+                                <a href="https://www.codechef.com/">Home</a>&nbsp;»&nbsp;<a href="https://www.codechef.com/contests/">Compete</a>&nbsp;»&nbsp;<a id="ember271" class="ember-view" href="https://www.codechef.com/COOK62">September Mega Cook-Off 2015</a>&nbsp;»&nbsp;Stacks
+                            </div>
+                            <div id="main-content-problem" class="box-white">
+                                <table id="problem-page-top">
+                                <tbody><tr><td width="55%">
+                                    <h1 class="title">Stacks
+                                        <div style="display:inline-block;">
+                                            
+                                            <div class="todo-widget" style="visibility: visible; position: relative;top: 5px;"><input style="outline: none;" type="image" src="https://www.codechef.com/sites/all/themes/abessive/images/add1.png" title="Add problem to Todo list" class="todo-button" width="25" height="25" problem="STACKS" contest="COOK62"><div class="todo-button-message"></div></div>
+                                            
+                                         </div>
+                                    </h1>
+                                    <div style="padding:0; overflow:hidden; margin-bottom:5px;">
+                                        <div style="float:left; margin:3px 10px 0 0;">Problem code: <span id="problem-code">STACKS</span></div>
+                                    </div>
+                                    
+                                    
+                                    <div class="social-button-container">
+                                        <div class="social-button">
+                                            <div style="width: 80px; height: 20px;margin-top: -2px;"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="./Stacks   CodeChef_files/tweet_button.8d007ddfc184e6776be76fe9e5e52d69.en.html" style="position: static; visibility: visible; width: 78px; height: 20px;"></iframe></div>
+                                        </div>
+                                        <div class="social-button">
+                                                <div class="fb-like fb_iframe_widget" data-width="370px" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=10154282558660454&amp;container_width=0&amp;href=https%3A%2F%2Fwww.codechef.com%2FCOOK62%2Fproblems%2FSTACKS&amp;layout=standard&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;width=370"><span style="vertical-align: bottom; width: 370px; height: 25px;"><iframe name="fba36934c" width="370px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Stacks   CodeChef_files/like.html" style="border: none; visibility: visible; width: 370px; height: 25px;" class=""></iframe></span></div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    
+                                </td>
+                                <td width="45%">
+                                    <ul class="button-list">
+                                        
+                                        <li><a href="https://www.codechef.com/COOK62/status/STACKS" data-bindattr-261="261">All Submissions</a></li>
+                                    </ul>
+                                </td>
+                                </tr></tbody></table>
+                                <div id="problem-page-complete">
+                                    <div id="problem-left">
+                                        
+                                        <div class="content"><h3> Read problems statements in <a target="_blank" href="http://www.codechef.com/download/translated/COOK62/mandarin/STACKS.pdf">Mandarin Chinese</a> and <a target="_blank" href="http://www.codechef.com/download/translated/COOK62/russian/STACKS.pdf">Russian</a> as well.</h3>
+<p><meta charset="utf8"></p>
+<p>
+As every other little boy, Mike has a favorite toy to play with. Mike's favorite toy is a set of <b>N</b> disks. The boy likes to compose his disks in stacks, but there's one very important rule: the disks in a single stack must be ordered by their radiuses in a <b>strictly</b> increasing order such that the top-most disk will have the smallest radius.
+</p>
+<p>
+For example, a stack of disks with radii (5, 2, 1) is valid, while a stack of disks with radii (3, 4, 1) is not.
+</p>
+<p>
+Little Mike has recently come up with the following algorithm after the order of disks are given:
+</p>
+<p></p><ul>
+<li>First, Mike initiates an empty set of disk stacks.
+</li><li>Then, Mike processes the disks in the chosen order using the following pattern:
+<ul>
+<li>If there is at least one stack such that Mike can put the current disk on the top of the stack without making it invalid, then he chooses the stack with the smallest top disk radius <b>strictly</b> greater than the radius of the current disk, and puts the current disk on top of that stack.
+</li><li>Otherwise, Mike makes a new stack containing only the current disk.
+	</li></ul>
+</li></ul>
+<p></p>
+<p>
+For example, let's assume that the order of the disk radii is (3, 4, 5, 1, 1, 2). Here's how the set of the top stack disks will appear during the algorithm's run:
+</p>
+<p></p><ul>
+<li>In the beginning of the algorithm, the set of disk stacks is empty. After processing the first disk, the set of top stack disks is {3}.
+</li><li>We cannot put the second disk on the only stack that we have after processing the first disk, so we make a new stack. After processing the second disk, the set of top stack disks is {3, 4}.
+</li><li>We cannot put the third disk on any of the available stacks, so we make a new stack. After processing the third disk, the set of top stack disks is {3, 4, 5}.
+</li><li>The fourth disk has radius 1, so it can be easily put on any of the available stacks. According to the algorithm, we choose the stack with the top disk radius equal to 3. After processing the fourth disk, the set of top stack disks is {1, 4, 5}.
+</li><li>The fifth disk has radius 1, so there are two stacks we can put it on. According to the algorithm, we choose the stack with the top disk radius equal to 4. After processing the fifth disk, the set of top stack disks is {1, 1, 5}.
+</li><li>The sixth disk has radius 2, so there is only one stack we can put it on. The final set of top stack disks is {1, 1, 2}.
+</li></ul>
+<p></p>
+<p>
+Mike is really excited about his new algorithm, but he has so many disks that it seems impossible to simulate the algorithm manually.
+</p>
+<p>
+You are given an array <b>A</b> of <b>N</b> integers denoting the radii of Mike's disks. The disks are already ordered by Mike. Your task is to find the set of the stack top disk radii after the algorithm is done.
+</p>
+<h3>Input</h3>
+<p>
+The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.
+</p>
+<p>
+The first line of a test description contains a single integer <b>N</b>.
+</p>
+<p>
+The second line of the description contains <b>N</b> integers denoting <b>A<sub>1</sub>, ... , A<sub>N</sub></b>.
+</p>
+<h3>Output</h3>
+<p>
+For each test case, output a single line. The line should start with a positive integer <b>S</b> denoting the number of stacks after the algorithm is done. This should be followed by <b>S</b> integers on the same line denoting the stacks' top disk radii in <b>non-decreasing order</b>.
+</p>
+<p>
+If there are multiple correct answers, you are allowed to output any of them.
+</p>
+<h3>Constraints</h3>
+<ul>
+<li>1 ≤ <b>T</b> ≤ 10</li>
+<li>1 ≤ <b>N</b> ≤ 10<sup>5</sup></li>
+<li>1 ≤ <b>A<sub>i</sub></b> ≤ 10<sup>9</sup></li>
+</ul>
+<h3>Example</h3>
+<pre><b>Input:</b>
+3
+6
+3 4 5 1 1 2
+10
+3 2 9 5 2 9 4 14 7 10
+8
+14 5 13 19 17 10 18 12
+
+<b>Output:</b>
+3 1 1 2
+5 2 2 4 7 10 
+4 5 10 12 18 
+</pre><h3>Explanation</h3>
+<p><b>Example 1</b> is already explained in the problem statement.</p>
+
+                                        <hr>
+                                            <table cellspacing="0" cellpadding="0" align="left">
+                                                <tbody>
+                                                
+                                                <tr>
+                                                    <td width="14%">Author:</td>
+                                                    <td><a href="https://www.codechef.com/users/kostya_by" data-bindattr-306="306">kostya_by</a></td>
+                                                </tr>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <tr>
+                                                    <td width="14%">Date Added:</td>
+                                                    <td>11-09-2015</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td width="14%">Time Limit:</td>
+                                                    <td>2 sec</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="14%">Source Limit:</td>
+                                                    <td>50000 Bytes</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="14%">Languages:</td>
+                                                    <td>ADA, ASM, BASH, BF, C, C99 strict, CAML, CLOJ, CLPS, CPP 4.3.2, CPP 4.9.2, CPP14, CS2, D, ERL, FORT, FS, GO, HASK, ICK, ICON, JAVA, JS, LISP clisp, LISP sbcl, LUA, NEM, NICE, NODEJS, PAS fpc, PAS gpc, PERL, PERL6, PHP, PIKE, PRLG, PYPY, PYTH, PYTH 3.1.2, RUBY, SCALA, SCM chicken, SCM guile, SCM qobi, ST, TCL, TEXT, WSPC</td>
+                                                </tr>
+                                            </tbody></table>
+                                        </div>
+                                        <ul class="button-list bottom-bttn">
+                                            <input type="hidden" value="value" data-bindattr-305="305">
+                                            
+                                                <li><a href="https://www.codechef.com/COOK62/submit/STACKS" data-bindattr-309="309">Submit</a></li>
+                                            
+                                        </ul>
+                                        
+
+                                    </div>
+                                    <div id="problem-right">
+                                        <div id="sidebar-problem">
+                                            <div id="success-submissions">
+                                                
+                                            <div data-ember-action="310">
+                                            <h3>SUCCESSFUL SUBMISSIONS
+                                                <button class="toogle-button fa fa-plus-square-o"></button>
+                                            </h3>
+                                            </div>
+                                            
+                                        <div id="rankContentDiv"></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <hr>
+                            <div id="problem-comments">
+                                
+                                <div id="ember323" class="ember-view"><section class="cc-comments-section"><div class="comment-topmost-header"><h2 class="noselect cc-comments-title" data-ember-action="324">Comments <i class="fa fa-caret-right"></i></h2></div></section></div>
+                                
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+        </div></div>
+    <div id="footer" class="wrapper">
+        <!--<div class="r1 t"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div><div class="r5"></div>-->
+        <script type="text/javascript">
+            String.prototype.capitalize = function () {
+                return this.charAt(0).toUpperCase() + this.slice(1);
+            };
+
+            disconnectOauth = function (event, account) {
+                if (event != undefined) {
+                    event.preventDefault();
+                }
+                var r = confirm("Are you sure you want to disconnect " + account.capitalize() + " account?");
+                if (r == true) {
+                    clearUserCache();
+                    $.ajax({
+                        url: '/OAuth/' + account,
+                        type: 'DELETE',
+                        success: function () {
+                            window.location.reload();
+                        },
+                        error: function () {
+                            invokeGenericModal({
+                                message: "Couldn't complete your request. Please try again.",
+                                id: account + '-error-message'
+                            });
+                        }
+                    });
+                }
+            };
+        </script>
+        <div class="content clear-block">
+            <!-- Footer Contents -->
+            <div id="block-block-13" class="block block-block block-header">
+                <div class="content">
+                    <script language="javascript" type="text/javascript">
+                        function formatTime(ts) {
+                            now = new Date(ts);
+
+                            localtime = new Date();
+                            hour = now.getHours();
+                            min = now.getMinutes();
+                            sec = now.getSeconds();
+
+                            if (min <= 9) {
+                                min = "0" + min;
+                            }
+                            if (sec <= 9) {
+                                sec = "0" + sec;
+                            }
+                            if (hour > 12) {
+                                hour = hour - 12;
+                                add = " PM";
+                            } else {
+                                hour = hour;
+                                add = " AM";
+                            }
+                            if (hour == 12) {
+                                add = " PM";
+                            }
+                            if (hour == 00) {
+                                hour = "12";
+                            }
+
+                            $('#server-time').html(((hour <= 9) ? "0" + hour : hour) + ":" + min + ":" + sec + add);
+
+                            nextSec = (now.getTime() + 1000);
+
+                            setTimeout("formatTime(" + nextSec + ")", 1000);
+                        }
+                        function getDtTimeZone() {
+                            var rightNow = new Date();
+                            var toDay = new Date(rightNow.getFullYear(), 0, 1, 0, 0, 0, 0);
+                            var temp = toDay.toGMTString();
+                            var date2 = new Date(temp.substring(0, temp.lastIndexOf(" ") - 1));
+                            var stdTime = (toDay - date2) / (1000 * 60 * 60);
+                            return stdTime;
+                        }
+                        /*var d=new Date();
+                         $.ajax({
+                         url: '/umtza',
+                         type:'POST',
+                         data: 'umtza='+d.toString(),
+                         });
+                         */
+                    </script>
+                    <div id="disclaimer">CodeChef is a non-commercial competitive programming community</div>
+                    <div class="inner-wrapper">
+                        <div class="cols-2">
+                            <div id="secondary-nav">
+                                <ul>
+                                    <li><a href="http://www.codechef.com/aboutus/">About CodeChef</a></li>
+                                    <li><a target="_blank" href="http://www.directi.com/">About Directi</a></li>
+                                    <li><a href="http://www.codechef.com/ceoscorner/">CEO's Corner</a></li>
+                                    <li><a href="http://www.codechef.com/c-programming">C-Programming</a></li>
+                                    <li><a href="http://www.codechef.com/Programming-Languages">Programming
+                                        Languages</a></li>
+                                    <li><a href="http://www.codechef.com/contactus">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div id="copyright" class="cols-2">© 2009
+                                <a style="color: rgb(0, 0, 0);" href="http://www.directi.com/">Directi
+                                    Group</a>
+                                . All Rights Reserved. CodeChef uses SPOJ © by
+                                <a style="color: rgb(0, 0, 0);" href="http://www.sphere-research.com/">Sphere
+                                    Research Labs</a>
+                            </div>
+                            <div id="copyright-msg">In order to report copyright violations of any kind, send in an
+                                email to <a href="mailto:copyright@codechef.com">copyright@codechef.com</a></div>
+                        </div>
+                        <div align="right" class="cols-2-right" style="float:right;">
+                            <div id="sponsor-strip">
+                                <a target="_blank" href="http://www.directi.com/"><img alt="CodeChef a product of Directi" src="https://www.codechef.com/sites/all/themes/abessive/images/footer-sponsor-strip.gif"></a><br>
+                                <span>The time now is: <span id="server-time">10:58:12 PM</span></span>
+                                <br>Your IP : <span id="client-ip">119.30.32.167</span>
+                                </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+
+                        var _gaq = _gaq || [];
+                        _gaq.push(['_setAccount', 'UA-53602-42']);
+                        _gaq.push(['_trackPageview']);
+
+                        (function () {
+                            var ga = document.createElement('script');
+                            ga.type = 'text/javascript';
+                            ga.async = true;
+                            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(ga, s);
+                        })();
+
+                    </script>
+
+
+                    <!-- Google Code for Visitors that do not sign-up Remarketing List -->
+                    <script type="text/javascript">
+                        /* <![CDATA[ */
+                        var google_conversion_id = 1066618556;
+                        var google_conversion_language = "en";
+                        var google_conversion_format = "3";
+                        var google_conversion_color = "666666";
+                        var google_conversion_label = "gbUUCPTlhAIQvJ3N_AM";
+                        var google_conversion_value = 0;
+                        /* ]]> */
+                    </script>
+                    <script type="text/javascript" src="./Stacks   CodeChef_files/conversion.js">
+                    </script><img height="1" width="1" border="0" alt="" src="https://www.googleadservices.com/pagead/conversion/1066618556/?random=1442765174948&cv=8&fst=1442765174948&num=1&fmt=3&value=0&label=gbUUCPTlhAIQvJ3N_AM&bg=666666&hl=en&guid=ON&eid=317150503&u_h=768&u_w=1366&u_ah=728&u_aw=1366&u_cd=24&u_his=1&u_tz=360&u_java=true&u_nplug=4&u_nmime=50&frm=0&url=https%3A//www.codechef.com/COOK62/problems/STACKS"><script src="./Stacks   CodeChef_files/saved_resource"></script>
+                    <noscript>
+                        &lt;div style="display:inline;"&gt;
+                            &lt;img height="1" width="1" style="border-style:none;" alt=""
+                                 src="//www.googleadservices.com/pagead/conversion/1066618556/?label=gbUUCPTlhAIQvJ3N_AM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+                        &lt;/div&gt;
+                    </noscript>
+
+                    <!-- Google Code for RM codechef Remarketing List -->
+                    <script type="text/javascript">
+                        /* <![CDATA[ */
+                        var google_conversion_id = 968176136;
+                        var google_conversion_language = "en";
+                        var google_conversion_format = "3";
+                        var google_conversion_color = "ffffff";
+                        var google_conversion_label = "iDk7CPDZ7wMQiOTUzQM";
+                        var google_conversion_value = 0;
+                        /* ]]> */
+                    </script>
+                    <script type="text/javascript" src="./Stacks   CodeChef_files/conversion.js">
+                    </script><img height="1" width="1" border="0" alt="" src="https://www.googleadservices.com/pagead/conversion/968176136/?random=1442765175548&cv=8&fst=1442765174948&num=2&fmt=3&value=0&label=iDk7CPDZ7wMQiOTUzQM&bg=ffffff&hl=en&guid=ON&eid=317150500&u_h=768&u_w=1366&u_ah=728&u_aw=1366&u_cd=24&u_his=1&u_tz=360&u_java=true&u_nplug=4&u_nmime=50&frm=0&url=https%3A//www.codechef.com/COOK62/problems/STACKS">
+                    <noscript>
+                        &lt;div style="display:inline;"&gt;
+                            &lt;img height="1" width="1" style="border-style:none;" alt=""
+                                 src="//www.googleadservices.com/pagead/conversion/968176136/?label=iDk7CPDZ7wMQiOTUzQM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+                        &lt;/div&gt;
+                    </noscript>
+
+                    <!-- Google Code for Snackdown -->
+                    <script type="text/javascript">
+                        /* <![CDATA[ */
+                        var google_conversion_id = 960072479;
+                        var google_custom_params = window.google_tag_params;
+                        var google_remarketing_only = true;
+                        /* ]]> */
+                    </script>
+                    <script type="text/javascript" src="./Stacks   CodeChef_files/conversion.js">
+                    </script><img height="1" width="1" border="0" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/960072479/?random=1442765175551&cv=8&fst=1442765174948&num=3&fmt=1&guid=ON&u_h=768&u_w=1366&u_ah=728&u_aw=1366&u_cd=24&u_his=1&u_tz=360&u_java=true&u_nplug=4&u_nmime=50&frm=0&url=https%3A//www.codechef.com/COOK62/problems/STACKS">
+                    <noscript>
+                        &lt;div style="display:inline;"&gt;
+                            &lt;img height="1" width="1" style="border-style:none;" alt=""
+                                 src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/960072479/?value=0&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+                        &lt;/div&gt;
+                    </noscript>
+
+
+                    <!-- Google Code for .tech domain -->
+                    <script type="text/javascript">
+                        /* <![CDATA[ */
+                        var google_conversion_id = 951716012;
+                        var google_conversion_label = "OiW5COr2yFsQrJHoxQM";
+                        var google_custom_params = window.google_tag_params;
+                        var google_remarketing_only = true;
+                        /* ]]> */
+                    </script>
+                    <script type="text/javascript" src="./Stacks   CodeChef_files/conversion.js">
+                    </script><img height="1" width="1" border="0" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/951716012/?random=1442765175555&cv=8&fst=1442765174948&num=4&fmt=1&label=OiW5COr2yFsQrJHoxQM&guid=ON&u_h=768&u_w=1366&u_ah=728&u_aw=1366&u_cd=24&u_his=1&u_tz=360&u_java=true&u_nplug=4&u_nmime=50&frm=0&url=https%3A//www.codechef.com/COOK62/problems/STACKS">
+                    <noscript>
+                        &lt;div style="display:inline;"&gt;
+                            &lt;img height="1" width="1" style="border-style:none;" alt=""
+                                 src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/951716012/?value=1.00&amp;amp;currency_code=USD&amp;amp;label=OiW5COr2yFsQrJHoxQM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+                        &lt;/div&gt;
+                    </noscript>
+
+                    <!-- Start Alexa Certify Javascript -->
+                    <script type="text/javascript">
+                        _atrk_opts = {atrk_acct: "q16Cj1a8gN00iz", domain: "codechef.com", dynamic: true};
+                        (function () {
+                            var as = document.createElement('script');
+                            as.type = 'text/javascript';
+                            as.async = true;
+                            as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js";
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(as, s);
+                        })();
+                    </script>
+                    <noscript>&lt;img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=q16Cj1a8gN00iz"
+                                   style="display:none" height="1" width="1" alt=""/&gt;</noscript>
+                    <!-- End Alexa Certify Javascript -->
+
+                    <div class="cc-footer-seo">
+                        <style scoped="">
+                            .cc-footer-seo table tr th {
+                                font-weight: bold;
+                                font-size: 13px;
+                                border: 0px;
+                                padding-left: 0px;
+                                text-decoration: underline;
+                            }
+
+                            .cc-footer-seo table tr td {
+                                font-size: 12px;
+                                padding-left: 0px;
+                            }
+                        </style>
+                        <span><a href="https://www.codechef.com/">CodeChef</a> - A Platform for Aspiring Programmers</span>
+
+                        <p>CodeChef was created as a platform to help programmers make it big in the world of
+                            algorithms, <strong>computer programming</strong> and <strong>programming
+                                contests</strong>. At CodeChef we work hard to revive the geek in you by hosting a
+                            <strong>programming contest</strong> at the start of the month and another smaller
+                            programming challenge in the middle of the month. We also aim to have training sessions
+                            and discussions related to <strong>algorithms, binary search</strong>, technicalities
+                            like <strong>array size</strong> and the likes. Apart from providing a platform for
+                            <strong>programming competitions</strong>, CodeChef also has various algorithm tutorials
+                            and forum discussions to help those who are new to the world of <strong>computer
+                                programming</strong>.</p>
+
+                        <p></p>
+                        <span><a href="https://www.codechef.com/problems/easy">Practice Section</a> - A Place to hone your 'Computer Programming Skills'</span>
+
+                        <p>Try your hand at one of our many practice problems and submit your solution in a language
+                            of your choice. Our <strong>programming contest</strong> judge accepts solutions in over
+                            35+ programming languages. Preparing for coding contests were never this much fun!
+                            Receive points, and move up through the CodeChef ranks. Use our practice section to
+                            better prepare yourself for the multiple <strong>programming challenges</strong> that
+                            take place through-out the month on CodeChef. </p>
+
+                        <p></p>
+                        <span><a href="https://www.codechef.com/contests/">Compete</a> - Monthly Programming Contests and Cook-offs</span>
+
+                        <p>Here is where you can show off your <strong>computer programming</strong> skills. Take
+                            part in our 10 day long monthly <strong>coding contest</strong> and the shorter format
+                            Cook-off <strong>coding contest</strong>. Put yourself up for recognition and win great
+                            prizes. Our <strong>programming contests</strong> have prizes worth up to INR 20,000
+                            (for Indian Community), $700 (for Global Community) and lots more CodeChef goodies up
+                            for grabs.</p>
+
+                        <p></p><br>
+                        <table border="0" cellspacing="5" cellpadding="5" width="60%">
+                            <tbody><tr>
+                                <th>Programming Tools</th>
+                                <th>Practice Problems</th>
+                                <th>Initiatives</th>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.codechef.com/ide">Online IDE</a></td>
+                                <td><a href="https://www.codechef.com/problems/easy">Easy</a></td>
+                                <td><a href="http://www.codechef.com/goforgold">Go for Gold</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://www.codechef.com/contests#FurtureContests">Upcoming Coding
+                                    Contests</a></td>
+                                <td><a href="https://www.codechef.com/problems/medium">Medium</a></td>
+                                <td><a href="http://www.codechef.com/school">CodeChef for Schools</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://www.codechef.com/hostyourcontest">Contest Hosting</a></td>
+                                <td><a href="https://www.codechef.com/problems/hard">Hard</a></td>
+                                <td><a href="http://www.codechef.com/campus_chapter/about">Campus Chapters</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://www.codechef.com/problemsetting">Problem Setting</a></td>
+                                <td><a href="https://www.codechef.com/problems/challenge">Challenge</a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://www.codechef.com/wiki/tutorials">CodeChef Tutorials</a></td>
+                                <td><a href="https://www.codechef.com/problems/extcontest">Peer</a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.codechef.com/wiki">CodeChef Wiki</a></td>
+                                <td><a href="https://www.codechef.com/problems/school">School</a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a href="https://www.codechef.com/wiki/faq">FAQ's</a></td>
+                                <td></td>
+                            </tr>
+                        </tbody></table>
+                        <p></p>
+                    </div>
+                </div>
+                <div id="block-block-48" class="block block-block block-header">
+                    <div class="content">
+                        <script type="text/javascript" src="./Stacks   CodeChef_files/jquery.cookie(1).js"></script>
+                        <script type="text/javascript" src="./Stacks   CodeChef_files/contest-notification.js"></script>
+                    </div>
+                </div>
+                <div id="block-block-51" class="block block-block block-header">
+                    <div class="content">
+                        <script type="text/javascript">var _sf_startpt = (new Date()).getTime()</script>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script type="text/javascript">
+            var fb_param = {};
+            fb_param.pixel_id = '6009000769402';
+            fb_param.value = '0.00';
+            (function () {
+                var fpw = document.createElement('script');
+                fpw.async = true;
+                fpw.src = '//connect.facebook.net/en_US/fp.js';
+                var ref = document.getElementsByTagName('script')[0];
+                ref.parentNode.insertBefore(fpw, ref);
+            })();
+        </script>
+        <noscript>&lt;img height="1" width="1" alt="" style="display:none"
+                       src="https://www.facebook.com/offsite_event.php?id=6009000769402&amp;amp;value=0"/&gt;</noscript>
+    </div>
+</center><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Stacks   CodeChef_files/44OwK74u0Ie.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>
+
+    var sscache = {};
+    function getPage(url, data, page) {
+        var cacheId = url+JSON.stringify(data);
+        var cache =sscache;
+        var success = function (data) {
+            cache[cacheId] = data;
+            $('#rankContentDiv').html(data['content']);
+            var newpage = page === undefined ? 1 : (parseInt(page) + 1);
+            var pageinfo = "<div align='center' class='pageinfo'><center> - </center></div>";
+            if (data['max_page']>0)
+            {
+                pageinfo="<div align='center' class='pageinfo'><center>"+newpage+" of "+data['max_page']+"</center></div>";
+            }
+            $("#loader").html(pageinfo);
+
+        };
+
+        var error = function (request, errorType) {
+            try {
+                if (page === undefined) {
+                    retryButton = '<center><input id="retryButton" type="button" value="Retry"/></center>';
+                    $('#rankContentDiv').html(retryButton);
+                    $('#retryButton').click(function () {
+                        $('#rankContentDiv').html('<p align="center"><img src="/sites/all/themes/abessive/images/ajax-loader.gif" /> Fetching content</p>');
+                        getPage(url, data, page);
+                    });
+                }
+                else {
+                    $("#loader").html("<center>Oops! It couldn't load. Try again.</center>");
+                }
+            }
+            catch (e) {
+            }
+        };
+
+        if(cache.hasOwnProperty(cacheId)){
+            success(cache[cacheId]);
+            return;
+        }
+
+        cAjax({
+            url:url,
+            type:"GET",
+            data:data,
+            cache:false,
+            timeout:10000,
+            dataType: "json",
+            success:success,
+            error:error
+        });
+
+    }
+
+
+    function set_page(element) {
+        var page;
+
+        if (element == "prev")
+            page = $("#prev_p").val();
+        else if (element == "next")
+            page = $("#next_p").val();
+
+        return page;
+    }
+
+    function onload_getpage_ssubmissions(element) {
+        $('#loader').html('<p><img src="/misc/ajax_loader_d.gif" style="width: 120px; height:15px;"/></p>');
+        var contest = "";
+        if ($("#ccode").length != 0) {
+            contest = '&ccode=' + $("#ccode").val();
+        }
+
+        var page = set_page(element);
+        var data = "page=" + page + "&pcode=" + $("#pcode").val() + contest;
+        var url = "/ssubmission/prob";
+        getPage(url, data, page);
+    }
+</script>
+
+
+</body></html>
